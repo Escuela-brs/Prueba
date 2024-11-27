@@ -1,0 +1,457 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: sans-serif;
+ scroll-behavior: smooth;
+}
+
+#populares_nts, #nuevas_nts, #resenas_nv, #cuidarse_tecnolo, #nav_calendario {
+ margin: 10px 5px;
+}
+
+header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0.5rem;
+ height: 60px;
+ background-color: #ececfa;
+ position: sticky;
+ top: 0;
+ z-index: 99;
+ color: black;
+ width: 100%;
+}
+a {
+ color: #1c1c1c;
+ text-decoration: none;
+}
+
+/**/
+
+.nav_uno {
+ display: flex;
+ justify-content: space-between;
+}
+
+.nav_list {
+ list-style-type: none;
+ display: flex;
+ gap: 1rem;
+ margin-left: 1px;
+}
+
+.nav_list li a {
+ text-decoration: none;
+ color: #1c1c1c;
+ font-weight: 450;
+}
+
+.abrir_menu, .cerrar_menu {
+ display: none;
+}
+
+.nav_link {
+ transition: transform 0.3s ease;
+}
+
+.nav_link:hover {
+ transform: scale(1.1);
+}
+
+@media screen and (max-width: 550px) {
+ .abrir_menu, 
+ .cerrar_menu {
+  display: inline-block;
+  border: 0;
+  font-size: 1.75rem;
+  background-color: transparent;
+  cursor: pointer;
+ }
+ .abrir_menu {
+  color: #1c1c1c;
+  margin: 0px 0px 0px 195px;
+ }
+ .cerrar_menu {
+  color: #ececec;
+  position: absolute;
+  right: 20px;
+  top: 9px;
+  font-size: 2.5rem;
+ }
+ .nav_uno {
+  transform: translateX(100%);
+  opacity: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #1c1c1c;
+  padding: 9rem 1rem 40.5rem 1rem;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  visibility: hidden;
+ }
+ .nav_uno.visible {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+ }
+ .nav_list {
+  display: inline-block;
+  align-items: center;
+  width: 100%;
+  text-align: start;
+ }
+ .nav_link {
+  margin: 0.75rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.5s ease;
+ }
+ .nav_link:hover {
+  background: gray;
+  border-radius: 2.5px;
+  transform: scale(1.1);
+ }
+ .nav_list li a {
+  color: #ececec;
+ }
+}
+
+/**/
+
+
+
+/* Noticias Populares */
+
+.nav_nts {
+ display: flex;
+ overflow: scroll;
+}
+.element {
+ flex: 1 0 auto;
+ margin: 5px;
+ background-color: #ececfa;
+ width: 375px;
+ height: 300px;
+ align-content: end;
+ text-align: start;
+ color: white;
+ border-radius: 5px;
+ display: flex;
+ text-align: start;
+ align-items: end;
+}
+.element {
+ text-decoration: none;
+ color: black;
+ cursor: pointer;
+ padding: 5px 0 10px 10px;
+}
+@media screen and (max-width: 550px) { 
+ .nav_nts {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+ }
+ .element {
+  width: 220px;
+  height: 240px;
+ }
+ .element h4 {
+  margin-left: 5px;
+ }
+ .element span {
+  display: flex;
+  color: white;
+  align-items: center;
+  opacity: 65%;
+  font-size: 15px;
+  margin: 0px 5px 0px 0px;
+  font-family: 'Poppins', sans-serif;
+  text-justify: center;
+ }
+ .reloj {
+ padding-right: 5px;
+}
+}
+
+/**/
+
+.otras_nts, .tecno_cajita, .calen_cajita {
+ display: flex;
+ flex-wrap: wrap;
+}
+.titulo_p {
+ margin: 10px 10px;
+ margin-top: 25px;
+}
+.elements h2 {
+ display: flex;
+ margin: 10px;
+}
+h4 {
+ color: white;
+}
+.parrafo {
+ display: inline;
+ opacity: 65%;
+ margin: 0px 5px 0px 0px;
+ font-size: 15px;
+ font-family: 'Poppins', sans-serif;
+ align-items: center;
+}
+span {
+ display: flex;
+ color: white;
+ align-items: center;
+ opacity: 65%;
+ font-size: 15px;
+ margin: 0px 5px 0px 0px;
+ font-family: 'Poppins', sans-serif;
+ text-justify: center;
+}
+.reloj {
+ padding-right: 5px;
+}
+.title_p {
+ margin-bottom: 0px;
+}
+.title_x {
+ margin-bottom: 5px;
+}
+.ver_mas {
+ opacity: 70%;
+ border: none;
+ margin: 3px;
+ padding: 3px;
+ background: #ececfa;
+ border-radius: 0 10px 0 10px;
+ cursor: pointer;
+}
+.elements {
+ display: flex;
+ margin: 9px;
+ width: 48%;
+ height: 300px;
+ border-radius: 5px;
+ text-align: start;
+ align-items: end;
+}
+.elements {
+ text-decoration: none;
+ color: black;
+ padding: 5px 0 10px 10px;
+ cursor: pointer;
+}
+@media screen and (max-width: 550px) {
+ .elements {
+  width: 95%;
+  height: 280px;
+ }
+}
+
+/* Tecnologías pagina*/
+
+.tec {
+ display: flex;
+ margin: 9px;
+ width: 48%;
+ height: 250px;
+ border-radius: 5px;
+ text-align: start;
+ align-items: end;
+}
+.tec {
+ text-decoration: none;
+ color: black;
+ padding: 5px 0 10px 10px;
+ cursor: pointer;
+}
+@media screen and (max-width: 550px) {
+ .tec {
+  width: 95%;
+  height: 200px;
+ }
+}
+
+/* Final de la pagina */
+
+footer {
+ background: #ececfa;
+}
+.copyright {
+ display: flex;
+ background: #ececfa;
+ width: 100%;
+ height: 60px;
+ align-items: center;
+ justify-content: start;
+ padding: 10px;
+ justify-content: space-between;
+}
+.parrafo_foo {
+ display: inline-block;
+ opacity: 45%;
+ margin: 15px 10px 15px 0px;
+ font-size: 15px;
+ font-family: 'Poppins', sans-serif;
+ align-items: center;
+ }
+hr {
+ width: 95%;
+ margin: 0 20px;
+}
+@media screen and (max-width: 550px) {
+ hr {
+  margin: 0 10px;
+ }
+ .parrafo_foo {
+  display: inline-block;
+  opacity: 45%;
+  margin: 15px 10px 15px 0px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+ }
+}
+
+/* Boton hacia arriba */
+
+#scrollToTop {
+ bottom: 10px;
+ right: 10px;
+ background: white;
+ border: none;
+ cursor: pointer;
+ padding: 5px;
+ border-radius: 50%;
+ transition: transform 0.3s ease;
+}
+
+#scrollToTop:hover {
+ transform: scale(1.1);
+}
+
+/**/
+
+
+
+/* Cambios en las noticias populares*/
+
+.uno {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.2)), url(/img/Noticas_populares/racismo_japon_xd.png);
+ background-size: cover;
+ background-position: center;
+ transition: background-image 0.3s;
+}
+.dos {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.2)), url(/img/Noticas_populares/quinella_sword.png);
+ background-size: cover;
+ background-position: center;
+}
+.tres {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.2)), url(/img/Noticas_populares/frieren_cosplay.jpg);
+ background-size: cover;
+ background-position: center;
+}
+.cuatro {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.2)), url(/img/Noticas_populares/sono_bisque_amor.png);
+ background-size: cover;
+ background-position: center;
+}
+.cinco {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.2)), url(/img/Noticas_populares/DanMachi_fehca_estreno.png);
+ background-size: cover;
+ background-position: center;
+}
+
+/* Cambios en las noticias recientes */
+
+.alfa {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.5)), url('/img/noticias_recientes/alya_14_agosto.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.gama {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.5)), url('/img/noticias_recientes/dungeon_14_agosto-1.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.beta {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.5)), url('/img/noticias_recientes/critican_14_agosto.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.delta {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.5)), url('/img/noticias_recientes/decadencia_kyoto_14_agosto.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.eta {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.5)), url('/img/noticias_recientes/finalizar_13_agosto.png');
+ background-size: cover;
+ background-position: center;
+}
+.zeta {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.5)), url('/img/noticias_recientes/bocchi_13_agosto.jpg');
+ background-size: cover;
+ background-position: center;
+}
+
+/* Cambios en las reseñas de la comunidad */
+
+.one {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.2)), url();
+ background-size: cover;
+ background-position: center;
+}
+.two {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.2)), url();
+ background-size: cover;
+ background-position: center;
+}
+.three {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.2)), url();
+ background-size: cover;
+ background-position: center;
+}
+.fourt {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.2)), url();
+ background-size: cover;
+ background-position: center;
+}
+.five {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.1), rgba(5, 7, 12, 0.2)), url();
+ background-size: cover;
+ background-position: center;
+}
+
+/* Cambios en la div de tecnológia */
+
+.once {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.3), rgba(5, 7, 12, 0.5)), url(/img/tecnolo/seguridad_computadora.png);
+ background-size: cover;
+ background-position: center;
+}
+.doce {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.3), rgba(5, 7, 12, 0.5)), url(/img/tecnolo/amenzas_informaticas.jpg);
+ background-size: cover;
+ background-position: center;
+}
+.trece {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.3), rgba(5, 7, 12, 0.5)), url(/img/tecnolo/proteccion_informaticas.jpg);
+ background-size: cover;
+ background-position: center;
+}
+.catorce {
+ background-image: linear-gradient(rgba(5, 7, 12, 0.3), rgba(5, 7, 12, 0.5)), url(/img/tecnolo/seguridad_pc.jpg);
+ background-size: cover;
+ background-position: center;
+}
